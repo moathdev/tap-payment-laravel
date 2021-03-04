@@ -1,0 +1,27 @@
+{
+    "name": "moathdev/tap",
+    "description": "Tap payment api",
+    "authors": [
+        {
+            "name": "Moathdev",
+            "email": "muath@hey.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.12"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Moathdev\\Tap\\TapServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Moathdev\\Tap\\": "src/"
+        }
+    }
+}
