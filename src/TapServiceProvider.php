@@ -14,7 +14,7 @@ class TapServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            __DIR__.'/../../config/config.php' => config_path('config.php'),
+            __DIR__.'/config/config.php' => config_path('tap.php'),
         ]);
     }
 
