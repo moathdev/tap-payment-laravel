@@ -8,10 +8,10 @@
  */
 
 return [
-    'debug'               => function_exists('env') ? env('APP_DEBUG', false) : false,
+    'debug'                  => function_exists('env') ? env('APP_DEBUG', false) : false,
 
-    'API_URL'             => 'https://api.tap.company/v2/',
+    'API_URL'                => 'https://api.tap.company/v2/',
 
-    'TAP_SECRET_KEY_LIVE'        => function_exists('env') ? env('TAP_SECRET_KEY_LIVE', '') : '',
-    'TAP_SECRET_KEY_SANDBOX'        => function_exists('env') ? env('TAP_SECRET_KEY_SANDBOX', '') : '',
+    'TAP_SECRET_KEY_LIVE'    => function_exists('env') ? env('TAP_SECRET_KEY_LIVE', '') : '',
+    'TAP_SECRET_KEY_SANDBOX' => function_exists('env') ? env('TAP_SECRET_KEY_SANDBOX', '') : '',
 ];

@@ -13,6 +13,9 @@ class TapServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
+        $this->mergeConfigFrom(__DIR__.'/config/config.php', 'tap');
+
         $this->publishes([
             __DIR__.'/config/config.php' => config_path('tap.php'),
         ]);
@@ -26,5 +29,15 @@ class TapServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['tap'];
     }
 }
