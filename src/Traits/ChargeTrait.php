@@ -91,7 +91,7 @@ trait ChargeTrait
             throw new BadMethodCallException('Parameter required missing : charge_id');
         }
 
-        return $this->post('/charges/', $parameters);
+        return $this->put('/charges/', $parameters);
     }
 
     /**
@@ -107,7 +107,7 @@ trait ChargeTrait
      * - payment_methods | array[string] | optional
      * - customers | array[string] | optional
      * - charges | array[string] | optional
-     * - starting_after | array[string] | optional
+     * - starting_after | string | optional
      * - limit | integer | optional
      * @param array $parameters
      * @return object

@@ -4,6 +4,7 @@ namespace Moathdev\Tap;
 
 use Illuminate\Config\Repository as Config;
 use Moathdev\Tap\Traits\ChargeTrait;
+use Moathdev\Tap\Traits\RefundTrait;
 use Illuminate\Support\Facades\Http;
 use BadMethodCallException;
 
@@ -12,6 +13,7 @@ class Tap
 {
 
     use ChargeTrait;
+    use RefundTrait;
 
 
     /**
@@ -62,12 +64,19 @@ class Tap
         return $this->query($name, 'POST', $parameters);
     }
 
+    public function put($name, $parameters = [])
+    {
+        return $this->query($name, 'PUT', $parameters);
+    }
+
     public function query($name = null, $requestMethod = 'GET', $parameters = [])
     {
         if ($requestMethod == 'POST') {
             $response = $this->response->post($this->url.$name, $parameters);
-        } else {
+        } elseif($requestMethod == 'GET') {
             $response = $this->response->get($this->url.$name, $parameters);
+        } else {
+            $response = $this->response->put($this->url.$name, $parameters);
         }
 
         return $response->object();
