@@ -2,7 +2,7 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md) 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/Moathdev/tap?style=flat-square)](https://packagist.org/packages/moathdev/tap) 
-[![Total Downloads](https://img.shields.io/packagist/dt/Moathdev/tap.svg?style=flat-square)](https://packagist.org/packages/thujohn/twitter) 
+[![Total Downloads](https://img.shields.io/packagist/dt/Moathdev/tap.svg?style=flat-square)](https://packagist.org/packages/moathdev/tap) 
 ![GitHub Release Date](https://img.shields.io/github/release-date/moathdev/tap?label=latest%20release&style=flat-square)
 
 Pay payment API for Laravel  7.x & 8.x
